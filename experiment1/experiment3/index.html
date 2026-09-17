@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Campus Connect Task Planner – Experiment 3: JavaScript DOM manipulation, event handling, and dynamic content.">
+    <title>Campus Connect – Task Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">Campus<strong>Connect</strong></span>
+            </div>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <span class="exp-badge">Experiment 3 · JavaScript DOM</span>
+                <!-- EVENT 1: click → toggle dark/light theme -->
+                <button id="btn-theme" class="btn btn-outline-nav" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ===== GREETING SECTION ===== -->
+        <section class="card greeting-section" aria-labelledby="greeting-heading">
+            <div class="section-icon">👋</div>
+            <h1 id="greeting-heading">Hello, Student!</h1>
+            <p id="greeting-sub" class="muted">Click the button below to personalise your greeting.</p>
+
+            <!-- EVENT 2: click → change greeting text -->
+            <div class="greeting-controls">
+                <input type="text" id="input-name" class="text-input" placeholder="Type your name…" maxlength="40"
+                    aria-label="Your name">
+                <!-- EVENT 3: input → live preview -->
+                <p class="live-preview" aria-live="polite">
+                    Preview: <span id="preview-name">Student</span>
+                </p>
+                <button id="btn-greet" class="btn btn-primary" id="btn-greet">Update Greeting</button>
+            </div>
+        </section>
+
+        <!-- ===== TASK MANAGER SECTION ===== -->
+        <section class="card task-section" aria-labelledby="task-heading">
+            <div class="section-header-row">
+                <div>
+                    <div class="section-icon">📋</div>
+                    <h2 id="task-heading">My Study Tasks</h2>
+                    <p class="muted">Add tasks, then remove them as you complete them.</p>
+                </div>
+                <div class="task-counter-wrap">
+                    <span class="task-counter" id="task-counter" aria-live="polite">0</span>
+                    <span class="task-counter-label">tasks</span>
+                </div>
+            </div>
+
+            <!-- EVENT 4: keydown (Enter) → add task | input → char counter -->
+            <div class="add-task-row">
+                <div class="input-wrap">
+                    <input type="text" id="input-task" class="text-input"
+                        placeholder="Type a task and press Enter or click Add…" maxlength="80"
+                        aria-label="New task description">
+                    <span class="char-count" id="char-count" aria-live="polite">0 / 80</span>
+                </div>
+                <!-- EVENT 5: click → add task -->
+                <button id="btn-add-task" class="btn btn-primary">➕ Add Task</button>
+            </div>
+
+            <!-- Dynamic list – items are added/removed by JavaScript -->
+            <ul id="task-list" class="task-list" aria-label="Study task list">
+                <!-- Starter tasks inserted by JS on page load -->
+            </ul>
+
+            <p id="empty-msg" class="empty-msg" aria-live="polite">No tasks yet — add one above!</p>
+        </section>
+
+        <!-- ===== COLOUR CYCLE SECTION ===== -->
+        <section class="card colour-section" aria-labelledby="colour-heading">
+            <div class="section-icon">🎨</div>
+            <h2 id="colour-heading">Accent Colour</h2>
+            <p class="muted">Click any swatch to change the page accent colour in real time.</p>
+            <!-- EVENT 6: click on colour swatches → update CSS variable -->
+            <div class="swatches" id="swatches" role="group" aria-label="Colour swatches">
+                <button class="swatch active" data-color="#f5a623" aria-label="Gold"
+                    style="background:#f5a623;"></button>
+                <button class="swatch" data-color="#3b82f6" aria-label="Blue" style="background:#3b82f6;"></button>
+                <button class="swatch" data-color="#10b981" aria-label="Green" style="background:#10b981;"></button>
+                <button class="swatch" data-color="#ef4444" aria-label="Red" style="background:#ef4444;"></button>
+                <button class="swatch" data-color="#8b5cf6" aria-label="Purple" style="background:#8b5cf6;"></button>
+            </div>
+            <p class="colour-feedback">
+                Current accent: <strong id="colour-name">Gold (#f5a623)</strong>
+            </p>
+        </section>
+
+        <!-- ===== CONSOLE LOG SECTION ===== -->
+        <section class="card log-section" aria-labelledby="log-heading">
+            <div class="section-icon">🖥️</div>
+            <h2 id="log-heading">Event Log</h2>
+            <p class="muted">Live record of every DOM event fired on this page.</p>
+            <ul id="event-log" class="event-log" aria-live="polite" aria-label="Event log">
+                <!-- filled by JS -->
+            </ul>
+            <button id="btn-clear-log" class="btn btn-ghost" style="margin-top:0.8rem;">Clear Log</button>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-brand">🎓 Campus<strong>Connect</strong></p>
+            <p class="footer-copy">&copy; 2026 Campus Connect. Web Technologies Lab – Experiment 3.</p>
+        </div>
+    </footer>
+
+    <!-- Separate external JS file – linked at end of body so DOM is ready -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

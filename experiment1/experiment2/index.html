@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Campus Connect Learning Hub – explore top computer science courses, resources, and community support for university students.">
+    <title>Campus Connect – Learning Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">Campus<strong>Connect</strong></span>
+            </div>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="#home" id="nav-home">Home</a>
+                <a href="#courses" id="nav-courses">Courses</a>
+                <a href="#about" id="nav-about">About</a>
+                <a href="#contact" id="nav-contact" class="nav-cta">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-text">
+                <p class="hero-badge">Experiment 2 · HTML5 &amp; CSS3</p>
+                <h1 id="hero-heading">Learn. Grow. <span class="accent">Connect.</span></h1>
+                <p class="hero-sub">
+                    A fully responsive learning hub built with semantic HTML5 and modern CSS3,
+                    featuring Flexbox layout, CSS Grid, hover animations, and media queries.
+                </p>
+                <div class="hero-actions">
+                    <a href="#courses" class="btn btn-primary" id="hero-explore">Explore Courses</a>
+                    <a href="#about" class="btn btn-outline" id="hero-about">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
+                    alt="University students studying together on campus" class="hero-img" loading="lazy">
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <section class="stats-bar" aria-label="Platform statistics">
+            <div class="stat-item">
+                <strong>12,000+</strong>
+                <span>Active Students</span>
+            </div>
+            <div class="stat-item">
+                <strong>80+</strong>
+                <span>Courses Offered</span>
+            </div>
+            <div class="stat-item">
+                <strong>95%</strong>
+                <span>Satisfaction Rate</span>
+            </div>
+            <div class="stat-item">
+                <strong>50+</strong>
+                <span>Expert Instructors</span>
+            </div>
+        </section>
+
+        <!-- COURSES SECTION (Flexbox Cards) -->
+        <section id="courses" class="courses-section" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Popular Courses</h2>
+            <p class="section-sub">Curated programmes to sharpen your technical skills</p>
+
+            <div class="cards" role="list">
+
+                <article class="card" role="listitem" id="card-webdev">
+                    <div class="card-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Master HTML5, CSS3, JavaScript, and modern frameworks to build beautiful, responsive websites.
+                    </p>
+                    <span class="card-tag">Beginner</span>
+                    <button class="btn btn-card" id="btn-webdev">Enroll Now</button>
+                </article>
+
+                <article class="card" role="listitem" id="card-python">
+                    <div class="card-icon">🐍</div>
+                    <h3>Python Programming</h3>
+                    <p>From syntax fundamentals to data structures and OOP — build robust programs with Python.</p>
+                    <span class="card-tag">Beginner</span>
+                    <button class="btn btn-card" id="btn-python">Enroll Now</button>
+                </article>
+
+                <article class="card" role="listitem" id="card-cloud">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Computing</h3>
+                    <p>Explore AWS, Azure, and GCP. Deploy scalable applications on modern cloud infrastructure.</p>
+                    <span class="card-tag">Intermediate</span>
+                    <button class="btn btn-card" id="btn-cloud">Enroll Now</button>
+                </article>
+
+                <article class="card" role="listitem" id="card-data">
+                    <div class="card-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Analyse real-world datasets using pandas, NumPy, and machine-learning techniques.</p>
+                    <span class="card-tag">Advanced</span>
+                    <button class="btn btn-card" id="btn-data">Enroll Now</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION (CSS Grid – two columns) -->
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="about-grid">
+
+                <aside class="about-aside" aria-label="Platform highlights">
+                    <h3>Why Campus Connect?</h3>
+                    <ul class="feature-list">
+                        <li>✅ Industry-aligned curriculum</li>
+                        <li>✅ Learn at your own pace</li>
+                        <li>✅ Certificate on completion</li>
+                        <li>✅ Peer-review assignments</li>
+                        <li>✅ Live mentor sessions</li>
+                    </ul>
+                </aside>
+
+                <article class="about-article" aria-labelledby="about-heading">
+                    <h2 id="about-heading">About Campus Connect</h2>
+                    <p>
+                        Campus Connect is a student-first learning platform designed to bridge the gap between
+                        academic theory and industry practice. Built by students, for students, it offers
+                        structured learning paths across computer science, engineering, and design disciplines.
+                    </p>
+                    <p>
+                        This page is built as part of <strong>Experiment 2</strong> of the Web Technologies Lab.
+                        It demonstrates semantic HTML5 elements, an external CSS3 stylesheet, Flexbox-based card
+                        layout, CSS Grid for two-column content, hover effects, and responsive media queries.
+                    </p>
+                    <a href="#courses" class="btn btn-primary" id="about-cta">Browse All Courses</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <p class="footer-brand">🎓 Campus<strong>Connect</strong></p>
+            <p class="footer-copy">&copy; 2026 Campus Connect Learning Hub. Built for Web Technologies Lab – Experiment
+                2.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

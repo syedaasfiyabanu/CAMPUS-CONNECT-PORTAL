@@ -1,0 +1,116 @@
+:root {
+    --primary-green: #0d5c3a;
+    --accent-green: #107c41;
+    --student-color: #2e7d32;
+    --faculty-color: #1565c0;
+    --admin-color: #6a1b9a;
+    --bg-light: #f8fafc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffff;
+    color: #333;
+}
+
+.navbar {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Container for the navigation buttons */
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Base button box styles */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Secondary Button (Login) - Outlined Box */
+.btn-secondary {
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(13, 92, 58, 0.08);
+}
+
+/* Primary Button (Register) - Solid Box */
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+}
+
+.brand-badge {
+    background: #a61c1c;
+    color: #f8fafc;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 50%;
+
+}
+
+.university-name {
+    font-weight: 800;
+    color: var(--primary-green);
+}
+
+.sub-dept {
+    font-size: 0.85rem;
+    color: var(--primary-green);
+}
+
+
+.hero-banner {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #052e1c 100%);
+    color: white;
+    padding: 3.5rem 1rem;
+    text-align: center;
+
+}
+
+.module-tag {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
